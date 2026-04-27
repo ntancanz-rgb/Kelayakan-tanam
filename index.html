@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelayakan Tanam Lahan Basah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Penentuan Kelayakan Tanam</h1>
+        <p>Masukkan data kondisi lahan basah di bawah ini:</p>
+
+        <form id="formData">
+            <!-- Keasaman Tanah -->
+            <label>Keasaman Tanah (pH):</label>
+            <select id="ph" required>
+                <option value="">-- Pilih Kondisi --</option>
+                <option value="4.0">Sangat Asam (Tanah Merah/Kuning pekat)</option>
+                <option value="5.5">Agak Asam (Tanah Kuning)</option>
+                <option value="6.5">Netral / Ideal (Tanah Hijau/Hitam) ✅</option>
+                <option value="8.0">Agak Basa / Kapur (Putih/Kerak)</option>
+            </select>
+
+            <!-- Kedalaman Air -->
+            <label>Kedalaman Genangan Air:</label>
+            <select id="genangan" required>
+                <option value="">-- Pilih Kondisi --</option>
+                <option value="5">Dangkal (Kurang dari 10 cm)</option>
+                <option value="20">Sedang (10 - 30 cm) ✅ Ideal</option>
+                <option value="40">Dalam (Lebih dari 30 cm)</option>
+            </select>
+
+            <!-- Kesuburan -->
+            <label>Kesuburan Tanah:</label>
+            <select id="organik" required>
+                <option value="">-- Pilih Kondisi --</option>
+                <option value="1.0">Kurang Subur (Tanah keras/merah)</option>
+                <option value="2.5">Cukup Subur</option>
+                <option value="4.0">Sangat Subur (Tanah gembur/hitam) ✅</option>
+            </select>
+
+            <!-- Salinitas -->
+            <label>Tingkat Kegaramannya:</label>
+            <select id="salinitas" required>
+                <option value="">-- Pilih Kondisi --</option>
+                <option value="1.0">Tidak Asin / Air Tawar ✅</option>
+                <option value="3.0">Agak Asin</option>
+                <option value="5.0">Sangat Asin / Payau</option>
+            </select>
+
+            <button type="submit">🔍 CEK KELAYAKAN</button>
+        </form>
+
+        <div id="hasilBox" class="hasil">
+            <h3>Hasil Analisis akan muncul di sini...</h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
